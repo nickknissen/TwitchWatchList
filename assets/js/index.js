@@ -36,8 +36,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // RUNS WHEN THE DOM IS MODIFIED
 document.addEventListener('DOMSubtreeModified', function () {
 
+  const deleteButton = document.getElementById('deleteBtn');
+
   // DELETE CHANNEL FUNCTION
-  $('.deleteBtn').on('click', function () {
+  deleteButton.addEventListener('click', function () {
     var itemToDelete = this.id.toLowerCase();
     // console.log(itemToDelete);
 
